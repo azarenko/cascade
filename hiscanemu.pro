@@ -51,7 +51,7 @@ SOURCES += autotty.cpp \
            serial.cpp \
            ui.cpp
 
-QMAKE_CXXFLAGS += -I/usr/include/libusb-1.0
+QMAKE_CXXFLAGS += -I/usr/include/libusb-1.0 -static
 QMAKE_CXXFLAGS_WARN_ON += -Wno-unused
 
 linux-*-g++ {
@@ -74,8 +74,8 @@ win32-g++* {
   QMAKE_CXXFLAGS_DEBUG += -mconsole
 }
 
-QMAKE_CXXFLAGS_RELEASE += -DNDEBUG -O3 -fomit-frame-pointer -static
-QMAKE_CXXFLAGS_DEBUG += -O3 -static
+QMAKE_CXXFLAGS_RELEASE += -DNDEBUG -O3 -fomit-frame-pointer
+QMAKE_CXXFLAGS_DEBUG += -O3
 
 #!noftdi {
 #  LIBS += -lftdi

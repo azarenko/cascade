@@ -38,3 +38,12 @@ object_script\.\.Debug
 object_script\.\.Release
 
 \.qmake\.stash
+
+release/
+
+object_script\.cascade\.Release
+
+object_script\.cascade\.Debug
+/ftd2xx_win32/*.h
+/ftd2xx_win32/*.lib
+/ftd2xx_win32/*.dll
